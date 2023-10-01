@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width-device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>HTML Form</title>
+    <!-- Boostrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <!-- Font Awesome -->
+    <script src="https://kit.fontawesome.com/8a11f4ebf1.js" crossorigin="anonymous"></script>
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <div class="payment-form">
+        <div class="card m-3" style="width: 80rem">
+            <div class="card-header">
+                <h2>Payment form example</h2>
+            </div>
+            <div class="card-body">
+                <div class="alert alert-danger" role="alert">
+                    Some fields are missing
+                </div>
+                <form class="formRow1 d-flex mb-2">
+                    <!-- Row 1 Starts -->
+                    <div class="col-md-5 position-relative p-2">
+                        <label for="cardNumber" class="form-label">Card #</label>
+                        <input type="text" class="form-control" id="validationTooltip02" placeholder="0000000000000000" required>
+                    </div>
+                    <div class="col-md-3 position-relative p-2">
+                        <label for="cvc" class="form-label">CVC</label>
+                        <input type="text" class="form-control" id="validationTooltip02" placeholder="0000" required>
+                    </div>
+                    <div class="col-md-4 position-relative p-2">
+                        <label for="amount" class="form-label">Amount</label>
+                        <i class="fa-solid fa-dollar-sign"></i><input type="text" class="form-control" id="validationTooltip02" placeholder="Amount" required>
+                    </div>
+                </form>
+                <!-- Row 1 Ends -->
+
+                <!-- Row 2 Starts -->
+                <form class="formRow2 d-flex mb-2">
+                    <div class="col-md-6 position-relative p-2">
+                        <label for="firstName" class="form-label">First Name</label>
+                        <input type="text" class="form-control" id="validationTooltip02" required>
+                    </div>
+                    <div class="col-md-6 position-relative p-2">
+                        <label for="lastName" class="form-label">Last Name</label>
+                        <input type="text" class="form-control" id="validationTooltip02" required>
+                    </div>
+                </form>
+                <!-- Row 2 Ends -->
+
+                <!-- Row 3 Starts -->
+                <form class="formRow2 d-flex mb-2">
+                    <div class="col-md-6 position-relative p-2">
+                        <label for="cardNumber" class="form-label">City</label>
+                        <input type="text" class="form-control" id="validationTooltip02" required>
+                    </div>
+                    <div class="col-md-3 position-relative p-2">
+                        <label for="state" class="form-label">State</label>
+                        <select class="form-select" aria-label="Default select example" placeholder="Pick a state">
+                            <option value="" selected disabled>Pick a state</option>
+                            <option value="">Alabama</option>
+                            <option value="">Alaska</option>
+                            <option value="">Arizona</option>
+                            <option value="">Arkansas</option>
+                            <option value="">California</option>
+                            <option value="">Colorado</option>
+                            <option value="">Connecticut</option>
+                            <option value="">Delaware</option>
+                            <option value="">Florida</option>
+                            <option value="">Georgia</option>
+                        </select>
+                    </div>
+                    <div class="col-md-3 position-relative p-2">
+                        <label for="amount" class="form-label">Postal Code</label>
+                        <input type="text" class="form-control" id="validationTooltip02" required>
+                    </div>
+                </form>
+                <!-- Row 3 Ends -->
+                
+                <!-- Row 4 Starts -->
+                <div class="Row4 d-flex mb-4">
+
+                    <!-- Row 4 Contents Left -->
+                    <div class="Left col-6">
+                        <label for="paymentOption" class="form-label p-2">We accept:</label>
+                        <div class="col-6 bg-secondary rounded p-2">
+                            <form class="formRow4Left d-flex justify-content-center">
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
+                                    <label class="form-check-label" for="inlineRadio1"><i class="fa-brands fa-cc-mastercard" style="color: white;"></i></label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
+                                    <label class="form-check-label" for="inlineRadio2"><i class="fa-brands fa-cc-visa" style="color: white;"></i></label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
+                                    <label class="form-check-label" for="inlineRadio2"><i class="fa-brands fa-cc-diners-club" style="color: white;"></i></label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
+                                    <label class="form-check-label" for="inlineRadio2"><i class="fa-brands fa-cc-amex" style="color: white;"></i></label>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+
+                    <!-- Row 4 Contents Right -->
+                    <div class="Right col-6">
+                        <form class="formRow4Right message p-2">
+                            <label for="message" class="form-label">Message</label>
+                            <textarea class="form-control" id="message" rows="3"></textarea>
+                            <p style="font-size: small;">Add any notes here.</p>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="card-footer p-2"> 
+                <div class="buttons float-end">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="payment-form">Cancel</button>
+                    <button type="button" class="btn btn-primary">Send</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
